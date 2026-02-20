@@ -1,0 +1,25 @@
+[EXT] Incident INC39049779 Patching script
+
+Hi @Chow, Li Li (Allianz Technology),
+
+               Here we have attached policy with RCA and patching script. Kindly help to approve the Patching script.
+
+
+Policy No
+
+Current Status
+
+Status to be Patched
+
+Document Id
+
+Incident
+
+RCA
+ 
+
+Once approved @Kumar, Jeeban Pani (Allianz Malaysia Berhad)/ @Hoang, Thai Vu : Kindly help to validate & execute the patching script in PRD.
+
+ 
+
+ 

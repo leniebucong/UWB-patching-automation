@@ -1,0 +1,3507 @@
+{
+  "info" : {
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "name" : "INC41680728"
+  },
+  "item" : [ {
+    "name" : "20068319",
+    "item" : [ {
+      "name" : "1.Before Patch 20068319 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a35f9de89c44ca9abd4aa",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a35f9de89c44ca9abd4aa" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068319\"] = rdata[\"proposalNumber\"] === \"20068319\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a35f9de89c44ca9abd4aa",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a35f9de89c44ca9abd4aa" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068319\"] = rdata[\"proposalNumber\"] === \"20068319\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068792",
+    "item" : [ {
+      "name" : "1.Before Patch 20068792 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a2e6e410f30341fb895c1",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a2e6e410f30341fb895c1" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068792\"] = rdata[\"proposalNumber\"] === \"20068792\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a2e6e410f30341fb895c1",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a2e6e410f30341fb895c1" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068792\"] = rdata[\"proposalNumber\"] === \"20068792\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20065212",
+    "item" : [ {
+      "name" : "1.Before Patch 20065212 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a2cef410f30341fb895c0",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a2cef410f30341fb895c0" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20065212\"] = rdata[\"proposalNumber\"] === \"20065212\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a2cef410f30341fb895c0",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a2cef410f30341fb895c0" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20065212\"] = rdata[\"proposalNumber\"] === \"20065212\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068101",
+    "item" : [ {
+      "name" : "1.Before Patch 20068101 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a2b0a410f30341fb895be",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a2b0a410f30341fb895be" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068101\"] = rdata[\"proposalNumber\"] === \"20068101\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a2b0a410f30341fb895be",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a2b0a410f30341fb895be" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068101\"] = rdata[\"proposalNumber\"] === \"20068101\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20067344",
+    "item" : [ {
+      "name" : "1.Before Patch 20067344 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a275a410f30341fb895bb",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a275a410f30341fb895bb" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20067344\"] = rdata[\"proposalNumber\"] === \"20067344\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a275a410f30341fb895bb",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a275a410f30341fb895bb" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20067344\"] = rdata[\"proposalNumber\"] === \"20067344\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069757",
+    "item" : [ {
+      "name" : "1.Before Patch 20069757 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a14e4de89c44ca9abd49e",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a14e4de89c44ca9abd49e" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069757\"] = rdata[\"proposalNumber\"] === \"20069757\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a14e4de89c44ca9abd49e",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a14e4de89c44ca9abd49e" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069757\"] = rdata[\"proposalNumber\"] === \"20069757\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20062953",
+    "item" : [ {
+      "name" : "1.Before Patch 20062953 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a0ce5410f30341fb895b2",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a0ce5410f30341fb895b2" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20062953\"] = rdata[\"proposalNumber\"] === \"20062953\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/28/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697a0ce5410f30341fb895b2",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697a0ce5410f30341fb895b2" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20062953\"] = rdata[\"proposalNumber\"] === \"20062953\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070127",
+    "item" : [ {
+      "name" : "1.Before Patch 20070127 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ac3a6de89c44ca9abd4ba",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ac3a6de89c44ca9abd4ba" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070127\"] = rdata[\"proposalNumber\"] === \"20070127\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ac3a6de89c44ca9abd4ba",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ac3a6de89c44ca9abd4ba" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070127\"] = rdata[\"proposalNumber\"] === \"20070127\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070006",
+    "item" : [ {
+      "name" : "1.Before Patch 20070006 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697abfb4410f30341fb895d4",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697abfb4410f30341fb895d4" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070006\"] = rdata[\"proposalNumber\"] === \"20070006\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697abfb4410f30341fb895d4",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697abfb4410f30341fb895d4" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070006\"] = rdata[\"proposalNumber\"] === \"20070006\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068053",
+    "item" : [ {
+      "name" : "1.Before Patch 20068053 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ad5cfde89c44ca9abd4c3",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ad5cfde89c44ca9abd4c3" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068053\"] = rdata[\"proposalNumber\"] === \"20068053\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ad5cfde89c44ca9abd4c3",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ad5cfde89c44ca9abd4c3" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068053\"] = rdata[\"proposalNumber\"] === \"20068053\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069723",
+    "item" : [ {
+      "name" : "1.Before Patch 20069723 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ad446410f30341fb895e0",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ad446410f30341fb895e0" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069723\"] = rdata[\"proposalNumber\"] === \"20069723\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ad446410f30341fb895e0",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ad446410f30341fb895e0" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069723\"] = rdata[\"proposalNumber\"] === \"20069723\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069765",
+    "item" : [ {
+      "name" : "1.Before Patch 20069765 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ae0a0410f30341fb895e6",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ae0a0410f30341fb895e6" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069765\"] = rdata[\"proposalNumber\"] === \"20069765\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ae0a0410f30341fb895e6",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ae0a0410f30341fb895e6" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069765\"] = rdata[\"proposalNumber\"] === \"20069765\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070070",
+    "item" : [ {
+      "name" : "1.Before Patch 20070070 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697adff2410f30341fb895e4",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697adff2410f30341fb895e4" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070070\"] = rdata[\"proposalNumber\"] === \"20070070\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697adff2410f30341fb895e4",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697adff2410f30341fb895e4" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070070\"] = rdata[\"proposalNumber\"] === \"20070070\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069694",
+    "item" : [ {
+      "name" : "1.Before Patch 20069694 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697b0072410f30341fb89603",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697b0072410f30341fb89603" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069694\"] = rdata[\"proposalNumber\"] === \"20069694\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697b0072410f30341fb89603",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697b0072410f30341fb89603" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069694\"] = rdata[\"proposalNumber\"] === \"20069694\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070084",
+    "item" : [ {
+      "name" : "1.Before Patch 20070084 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697b0049410f30341fb89602",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697b0049410f30341fb89602" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070084\"] = rdata[\"proposalNumber\"] === \"20070084\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697b0049410f30341fb89602",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697b0049410f30341fb89602" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070084\"] = rdata[\"proposalNumber\"] === \"20070084\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070430",
+    "item" : [ {
+      "name" : "1.Before Patch 20070430 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697b0aea410f30341fb8960a",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697b0aea410f30341fb8960a" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070430\"] = rdata[\"proposalNumber\"] === \"20070430\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/29/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697b0aea410f30341fb8960a",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697b0aea410f30341fb8960a" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070430\"] = rdata[\"proposalNumber\"] === \"20070430\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068710",
+    "item" : [ {
+      "name" : "1.Before Patch 20068710 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c207a410f30341fb89685",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c207a410f30341fb89685" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068710\"] = rdata[\"proposalNumber\"] === \"20068710\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c207a410f30341fb89685",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c207a410f30341fb89685" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068710\"] = rdata[\"proposalNumber\"] === \"20068710\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070604",
+    "item" : [ {
+      "name" : "1.Before Patch 20070604 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c1ef0410f30341fb89684",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c1ef0410f30341fb89684" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070604\"] = rdata[\"proposalNumber\"] === \"20070604\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c1ef0410f30341fb89684",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c1ef0410f30341fb89684" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070604\"] = rdata[\"proposalNumber\"] === \"20070604\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068422",
+    "item" : [ {
+      "name" : "1.Before Patch 20068422 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c2578410f30341fb8968a",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c2578410f30341fb8968a" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068422\"] = rdata[\"proposalNumber\"] === \"20068422\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c2578410f30341fb8968a",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c2578410f30341fb8968a" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068422\"] = rdata[\"proposalNumber\"] === \"20068422\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068463",
+    "item" : [ {
+      "name" : "1.Before Patch 20068463 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c251ede89c44ca9abd555",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c251ede89c44ca9abd555" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068463\"] = rdata[\"proposalNumber\"] === \"20068463\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c251ede89c44ca9abd555",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c251ede89c44ca9abd555" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068463\"] = rdata[\"proposalNumber\"] === \"20068463\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068742",
+    "item" : [ {
+      "name" : "1.Before Patch 20068742 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c285a410f30341fb8968d",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c285a410f30341fb8968d" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068742\"] = rdata[\"proposalNumber\"] === \"20068742\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c285a410f30341fb8968d",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c285a410f30341fb8968d" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068742\"] = rdata[\"proposalNumber\"] === \"20068742\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068926",
+    "item" : [ {
+      "name" : "1.Before Patch 20068926 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c5332410f30341fb896b3",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c5332410f30341fb896b3" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068926\"] = rdata[\"proposalNumber\"] === \"20068926\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c5332410f30341fb896b3",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c5332410f30341fb896b3" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068926\"] = rdata[\"proposalNumber\"] === \"20068926\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070147",
+    "item" : [ {
+      "name" : "1.Before Patch 20070147 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c54b0410f30341fb896b5",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c54b0410f30341fb896b5" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070147\"] = rdata[\"proposalNumber\"] === \"20070147\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c54b0410f30341fb896b5",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c54b0410f30341fb896b5" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070147\"] = rdata[\"proposalNumber\"] === \"20070147\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070519",
+    "item" : [ {
+      "name" : "1.Before Patch 20070519 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c570bde89c44ca9abd579",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c570bde89c44ca9abd579" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070519\"] = rdata[\"proposalNumber\"] === \"20070519\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c570bde89c44ca9abd579",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c570bde89c44ca9abd579" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070519\"] = rdata[\"proposalNumber\"] === \"20070519\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070438",
+    "item" : [ {
+      "name" : "1.Before Patch 20070438 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c5799410f30341fb896b9",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c5799410f30341fb896b9" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070438\"] = rdata[\"proposalNumber\"] === \"20070438\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c5799410f30341fb896b9",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c5799410f30341fb896b9" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070438\"] = rdata[\"proposalNumber\"] === \"20070438\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070236",
+    "item" : [ {
+      "name" : "1.Before Patch 20070236 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c5ed9de89c44ca9abd57e",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c5ed9de89c44ca9abd57e" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070236\"] = rdata[\"proposalNumber\"] === \"20070236\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c5ed9de89c44ca9abd57e",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c5ed9de89c44ca9abd57e" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070236\"] = rdata[\"proposalNumber\"] === \"20070236\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20067847",
+    "item" : [ {
+      "name" : "1.Before Patch 20067847 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c65dbde89c44ca9abd581",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c65dbde89c44ca9abd581" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20067847\"] = rdata[\"proposalNumber\"] === \"20067847\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c65dbde89c44ca9abd581",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c65dbde89c44ca9abd581" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20067847\"] = rdata[\"proposalNumber\"] === \"20067847\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070464",
+    "item" : [ {
+      "name" : "1.Before Patch 20070464 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c6228410f30341fb896c4",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c6228410f30341fb896c4" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070464\"] = rdata[\"proposalNumber\"] === \"20070464\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c6228410f30341fb896c4",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c6228410f30341fb896c4" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070464\"] = rdata[\"proposalNumber\"] === \"20070464\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070758",
+    "item" : [ {
+      "name" : "1.Before Patch 20070758 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c7a31410f30341fb896cf",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c7a31410f30341fb896cf" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070758\"] = rdata[\"proposalNumber\"] === \"20070758\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697c7a31410f30341fb896cf",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697c7a31410f30341fb896cf" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070758\"] = rdata[\"proposalNumber\"] === \"20070758\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069498",
+    "item" : [ {
+      "name" : "1.Before Patch 20069498 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697cf303566171664608a952",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697cf303566171664608a952" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069498\"] = rdata[\"proposalNumber\"] === \"20069498\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697cf303566171664608a952",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697cf303566171664608a952" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069498\"] = rdata[\"proposalNumber\"] === \"20069498\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068898",
+    "item" : [ {
+      "name" : "1.Before Patch 20068898 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ce653566171664608a950",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ce653566171664608a950" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068898\"] = rdata[\"proposalNumber\"] === \"20068898\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697ce653566171664608a950",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697ce653566171664608a950" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068898\"] = rdata[\"proposalNumber\"] === \"20068898\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069306",
+    "item" : [ {
+      "name" : "1.Before Patch 20069306 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d5fba410f30341fb8972c",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d5fba410f30341fb8972c" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069306\"] = rdata[\"proposalNumber\"] === \"20069306\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d5fba410f30341fb8972c",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d5fba410f30341fb8972c" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069306\"] = rdata[\"proposalNumber\"] === \"20069306\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20066951",
+    "item" : [ {
+      "name" : "1.Before Patch 20066951 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d5f96410f30341fb8972b",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d5f96410f30341fb8972b" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20066951\"] = rdata[\"proposalNumber\"] === \"20066951\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d5f96410f30341fb8972b",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d5f96410f30341fb8972b" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20066951\"] = rdata[\"proposalNumber\"] === \"20066951\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069905",
+    "item" : [ {
+      "name" : "1.Before Patch 20069905 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d75be566171664608a999",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d75be566171664608a999" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069905\"] = rdata[\"proposalNumber\"] === \"20069905\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d75be566171664608a999",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d75be566171664608a999" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069905\"] = rdata[\"proposalNumber\"] === \"20069905\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20068890",
+    "item" : [ {
+      "name" : "1.Before Patch 20068890 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d7127566171664608a98a",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d7127566171664608a98a" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068890\"] = rdata[\"proposalNumber\"] === \"20068890\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d7127566171664608a98a",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d7127566171664608a98a" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20068890\"] = rdata[\"proposalNumber\"] === \"20068890\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069714",
+    "item" : [ {
+      "name" : "1.Before Patch 20069714 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d70ab566171664608a988",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d70ab566171664608a988" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069714\"] = rdata[\"proposalNumber\"] === \"20069714\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d70ab566171664608a988",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d70ab566171664608a988" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069714\"] = rdata[\"proposalNumber\"] === \"20069714\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070783",
+    "item" : [ {
+      "name" : "1.Before Patch 20070783 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d82bf410f30341fb89766",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d82bf410f30341fb89766" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070783\"] = rdata[\"proposalNumber\"] === \"20070783\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d82bf410f30341fb89766",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d82bf410f30341fb89766" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070783\"] = rdata[\"proposalNumber\"] === \"20070783\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070841",
+    "item" : [ {
+      "name" : "1.Before Patch 20070841 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d82a7566171664608a9b0",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d82a7566171664608a9b0" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070841\"] = rdata[\"proposalNumber\"] === \"20070841\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d82a7566171664608a9b0",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d82a7566171664608a9b0" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070841\"] = rdata[\"proposalNumber\"] === \"20070841\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20065077",
+    "item" : [ {
+      "name" : "1.Before Patch 20065077 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d7bd1410f30341fb8975e",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d7bd1410f30341fb8975e" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20065077\"] = rdata[\"proposalNumber\"] === \"20065077\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"1/30/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/697d7bd1410f30341fb8975e",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "697d7bd1410f30341fb8975e" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20065077\"] = rdata[\"proposalNumber\"] === \"20065077\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070754",
+    "item" : [ {
+      "name" : "1.Before Patch 20070754 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69806124566171664608a9f5",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69806124566171664608a9f5" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070754\"] = rdata[\"proposalNumber\"] === \"20070754\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/2/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69806124566171664608a9f5",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69806124566171664608a9f5" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070754\"] = rdata[\"proposalNumber\"] === \"20070754\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070633",
+    "item" : [ {
+      "name" : "1.Before Patch 20070633 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69814047566171664608aa0f",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69814047566171664608aa0f" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070633\"] = rdata[\"proposalNumber\"] === \"20070633\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/3/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69814047566171664608aa0f",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69814047566171664608aa0f" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070633\"] = rdata[\"proposalNumber\"] === \"20070633\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20069712",
+    "item" : [ {
+      "name" : "1.Before Patch 20069712 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/6982ab65566171664608aa76",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "6982ab65566171664608aa76" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069712\"] = rdata[\"proposalNumber\"] === \"20069712\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/4/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/6982ab65566171664608aa76",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "6982ab65566171664608aa76" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20069712\"] = rdata[\"proposalNumber\"] === \"20069712\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20066963",
+    "item" : [ {
+      "name" : "1.Before Patch 20066963 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/6982aafd410f30341fb89843",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "6982aafd410f30341fb89843" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20066963\"] = rdata[\"proposalNumber\"] === \"20066963\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/4/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/6982aafd410f30341fb89843",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "6982aafd410f30341fb89843" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20066963\"] = rdata[\"proposalNumber\"] === \"20066963\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20070013",
+    "item" : [ {
+      "name" : "1.Before Patch 20070013 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/6982aaa7566171664608aa75",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "6982aaa7566171664608aa75" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070013\"] = rdata[\"proposalNumber\"] === \"20070013\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/4/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/6982aaa7566171664608aa75",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "6982aaa7566171664608aa75" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20070013\"] = rdata[\"proposalNumber\"] === \"20070013\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20071174",
+    "item" : [ {
+      "name" : "1.Before Patch 20071174 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/698340aa566171664608aa9c",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "698340aa566171664608aa9c" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071174\"] = rdata[\"proposalNumber\"] === \"20071174\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/4/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/698340aa566171664608aa9c",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "698340aa566171664608aa9c" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071174\"] = rdata[\"proposalNumber\"] === \"20071174\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20071240",
+    "item" : [ {
+      "name" : "1.Before Patch 20071240 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69842b59410f30341fb89888",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69842b59410f30341fb89888" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071240\"] = rdata[\"proposalNumber\"] === \"20071240\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/5/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69842b59410f30341fb89888",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69842b59410f30341fb89888" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071240\"] = rdata[\"proposalNumber\"] === \"20071240\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20071246",
+    "item" : [ {
+      "name" : "1.Before Patch 20071246 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69843645410f30341fb8988d",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69843645410f30341fb8988d" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071246\"] = rdata[\"proposalNumber\"] === \"20071246\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/5/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69843645410f30341fb8988d",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69843645410f30341fb8988d" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071246\"] = rdata[\"proposalNumber\"] === \"20071246\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20071133",
+    "item" : [ {
+      "name" : "1.Before Patch 20071133 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69843538566171664608aabd",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69843538566171664608aabd" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071133\"] = rdata[\"proposalNumber\"] === \"20071133\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/5/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69843538566171664608aabd",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69843538566171664608aabd" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071133\"] = rdata[\"proposalNumber\"] === \"20071133\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20071107",
+    "item" : [ {
+      "name" : "1.Before Patch 20071107 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/698452f9410f30341fb8989b",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "698452f9410f30341fb8989b" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071107\"] = rdata[\"proposalNumber\"] === \"20071107\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/5/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/698452f9410f30341fb8989b",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "698452f9410f30341fb8989b" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20071107\"] = rdata[\"proposalNumber\"] === \"20071107\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  }, {
+    "name" : "20066796",
+    "item" : [ {
+      "name" : "1.Before Patch 20066796 Policy",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69845ce7410f30341fb8989f",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69845ce7410f30341fb8989f" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20066796\"] = rdata[\"proposalNumber\"] === \"20066796\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      } ],
+      "response" : [ ]
+    }, {
+      "name" : "1.Patch status Auto Approved & Underwriterdate",
+      "request" : {
+        "method" : "PATCH",
+        "header" : [ {
+          "value" : "{{cognitoIdToken}}",
+          "key" : "Authorization"
+        }, {
+          "value" : "{{x-api-key}}",
+          "key" : "X-Api-Key"
+        } ],
+        "body" : {
+          "raw" : "{\n  \"assignedTo\": \"Auto Underwriter\",\n  \"underwriterDate\": \"2/5/2026\"\n}",
+          "mode" : "raw",
+          "options" : {
+            "raw" : {
+              "language" : "json"
+            }
+          }
+        },
+        "url" : {
+          "raw" : "https://{{underwriter-api-url}}/uw/underwriter-service/underwritercases/69845ce7410f30341fb8989f",
+          "protocol" : "https",
+          "host" : [ "{{underwriter-api-url}}" ],
+          "path" : [ "uw", "underwriter-service", "underwritercases", "69845ce7410f30341fb8989f" ]
+        }
+      },
+      "event" : [ {
+        "script" : {
+          "exec" : [ "tests[\"Status code is 200\"] = responseCode.code === 200;", "var rdata = JSON.parse(responseBody);", "tests[\"Policy number is 20066796\"] = rdata[\"proposalNumber\"] === \"20066796\";", "tests[\"Policy Status is Auto Approved\"] = rdata[\"documentStatus\"] === \"Auto Approved\";" ],
+          "type" : "text/javascript"
+        },
+        "listen" : "test"
+      }, {
+        "script" : {
+          "exec" : [ ],
+          "type" : "text/javascript"
+        },
+        "listen" : "prerequest"
+      } ],
+      "response" : [ ]
+    } ]
+  } ]
+}
